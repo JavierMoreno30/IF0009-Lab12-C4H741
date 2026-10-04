@@ -2,7 +2,7 @@ package com.techconf.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
-
+import jakarta.validation.constraints.*;
 @Entity
 public class Asistente {
 
@@ -10,14 +10,20 @@ public class Asistente {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)
-    private String nombre;
+   @NotBlank
+@Size(min = 3)
+@Column(nullable = false)
+private String nombre;
 
-    @Column(nullable = false)
-    private String correo;
+@NotBlank
+@Email
+@Column(nullable = false)
+private String correo;
 
-    @Column(nullable = false)
-    private Integer edad;
+@NotNull
+@Min(18)
+@Column(nullable = false)
+private Integer edad;
 
     //lado "muchos": la FK charla_id vive en la tabla asistente
     @ManyToOne
