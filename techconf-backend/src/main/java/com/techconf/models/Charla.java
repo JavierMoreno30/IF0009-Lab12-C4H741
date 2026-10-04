@@ -33,8 +33,13 @@ public class Charla {
     @ElementCollection
     @CollectionTable(name = "charla_etiquetas", joinColumns = @JoinColumn(name = "charla_id"))
     @Column(name = "etiqueta")
-    private List<String> etiquetas = new ArrayList<>();
+    private List<String> etiquetas = new ArrayList<>(); 
+    
+@OneToMany(mappedBy = "charla", cascade = CascadeType.ALL)
+private List<Asistente> asistentes = new ArrayList<>();
 
+public List<Asistente> getAsistentes() { return asistentes; }
+public void setAsistentes(List<Asistente> asistentes) { this.asistentes = asistentes; }
     public Charla() {}
 
     public Long getId() { return id; }
