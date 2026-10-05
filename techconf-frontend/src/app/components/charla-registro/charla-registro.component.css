@@ -22,3 +22,9 @@ input, select { padding: .5rem; border: 1px solid #bbb; border-radius: 4px; }
 .btn-secondary { border: 1px solid #1a56db; background: #fff; color: #1a56db; border-radius: 4px; padding: .4rem .8rem; cursor: pointer; }
 .tags { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: .5rem; }
 .tag { background: #e6f4ea; color: #1e6b34; padding: .1rem .6rem; border-radius: 999px; font-size: .8rem; }
+/* --- Lab 12 --- */
+.asistentes { margin: .75rem 0; font-size: .9rem; }
+.asistente { margin: .15rem 0; }
+.sin-asistentes { color: #777; margin: .15rem 0; }
+.inscripcion-form { border-top: 1px solid #ddd; margin-top: .75rem; padding-top: .75rem; }
+.inscripcion-actions { display: flex; gap: .5rem; }
